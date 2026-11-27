@@ -59,4 +59,4 @@ Expenses persist to `localStorage` via a synchronous store subscriber (`store.su
 
 ## AI Usage Disclosure
 
-AI assistance (ChatGPT Plus, Claude, and Gemini via Antigravity) was used as an architectural sounding board, code reviewer, and technical mentor. The architecture, mathematical invariants, type design, and test criteria were actively directed, reviewed, and validated to ensure strict compliance with all assignment requirements.
+AI assistance (ChatGPT and Antigravity) was used as an architectural sounding board, code reviewer, and technical mentor. The architecture, mathematical invariants, type design, and test criteria were actively directed, reviewed, and validated to ensure strict compliance with all assignment requirements.
