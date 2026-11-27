@@ -42,7 +42,7 @@ JavaScript's IEEE 754 floating-point numbers introduce rounding errors (e.g. `0.
 This guarantees $\sum \text{Shares} \equiv \text{Amount}$ down to the single paisa without floating-point math.
 
 ### 2. Normalized Redux State with Pure Derived Selectors
-Only raw entities (`members` and `expenses`) are stored in Redux Toolkit. Derived values—member balances, filtered expenses, and visible totals—are never duplicated in state. Instead, pure memoized selectors (`createSelector`) compute them on-the-fly. This preserves a single source of truth and prevents state synchronization bugs. Form input keystrokes remain component-local.
+Only raw entities (`members` and `expenses`) are stored in Redux Toolkit. Derived values-member balances, filtered expenses, and visible totals, that are never duplicated in state. Instead, pure memoized selectors (`createSelector`) compute them on-the-fly. This preserves a single source of truth and prevents state synchronization bugs. Form input keystrokes remain component-local.
 
 ### 3. Fail-Safe Persistence with Custom Runtime Type Guards
 Expenses persist to `localStorage` via a synchronous store subscriber (`store.subscribe`) that triggers only when the expenses array reference mutates. On startup, a handcrafted recursive type guard validates all stored fields (IDs, descriptions, integer amounts, categories, dates, and split sums) without external schema libraries. Corrupted JSON or invalid structures gracefully fall back to the bundled sample data.
